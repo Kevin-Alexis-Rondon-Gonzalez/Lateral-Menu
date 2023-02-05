@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: #4281ac;
+  background-color: #e0f2fe;
 }
 
 .navigation {
   position: fixed;
   inset: 20px 0px 20px 20px; /*Position*/
-  width: 75px;
+  width: 50px;
   background-color: white;
   transition: 0.5s;
   display: flex;
@@ -32,7 +32,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; /*Flex-start*/
-  padding: 0, 23px;
+  padding: 0, 20px;
 }
 .navigation .menuToggle::before {
   content: "";
@@ -52,4 +52,72 @@ body {
   transform: translateY(8px);
   transition: 0.5s;
   box-shadow: 0 -8px 0 black;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.navigation li {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  transition: 0.5s;
+}
+.navigation li.active {
+  transform: translateX(20px);
+}
+.navigation li.active a .icon {
+  color: white;
+  background-color: var(--clr);
+}
+.navigation li.active a .icon::before {
+  opacity: 0.5;
+}
+.navigation li.active a .text {
+  color: var(--clr);
+}
+.navigation li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.navigation li a .icon {
+  position: relative;
+  display: block;
+  min-width: 50px;
+  height: 50px;
+  line-height: 60px;
+  transition: 0.5s;
+  border-radius: 10px;
+  font-size: 1.7em;
+  color: #222;
+}
+.navigation li a .icon::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr);
+  filter: blur(8px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.navigation li a .text {
+  position: relative;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */

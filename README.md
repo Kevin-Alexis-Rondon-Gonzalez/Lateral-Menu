@@ -12,4 +12,4 @@
 - 
 
 ![](./img/preview.png)
-![](./img/preview2s.png)
+![](./img/preview2.png)

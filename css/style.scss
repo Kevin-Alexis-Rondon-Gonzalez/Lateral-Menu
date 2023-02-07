@@ -45,7 +45,7 @@ body{
             width: 30px;
             height: 2px;
             background-color:black;
-            transform: translateY(8px );
+            transform: translateY(8px);
             transition: 0.5s;
             box-shadow: 0 -8px 0 black;
         }
@@ -119,5 +119,22 @@ body{
                 transition: 0.5s;
             }
         }
+    }
+    &.open .menuToggle::before{
+        transform:translateY(0px) rotate(45deg); 
+    }
+    &.open{
+        width: 200px;
+    }
+    &.open .menuToggle::after{
+        transform:translateY(0px) rotate(-45deg); 
+        box-shadow: 0 0 0 #333;
+    }
+    &.open ul li.active{
+        transform: translateX(10px);
+    }
+    &.open ul li .text{
+        opacity: 1;
+        visibility: visible;
     }
 }

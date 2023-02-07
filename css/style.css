@@ -120,4 +120,21 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
+}
+.navigation.open .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+}
+.navigation.open {
+  width: 200px;
+}
+.navigation.open .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+  box-shadow: 0 0 0 #333;
+}
+.navigation.open ul li.active {
+  transform: translateX(10px);
+}
+.navigation.open ul li .text {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
